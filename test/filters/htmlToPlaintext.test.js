@@ -2,7 +2,7 @@
 
 describe('Filters: htmlToPlaintext', function() {
 
-    beforeEach(module('flickularApp'));
+    beforeEach(module('eBlastApp'));
 
     it('htmlToPlaintext: basic html should return pure text', inject(function($rootScope, $filter) {
         var html = $filter('htmlToPlaintext');

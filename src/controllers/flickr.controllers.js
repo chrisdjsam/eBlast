@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('flickularApp')
+angular.module('eBlastApp')
 
-    .controller('FlickrListCtrl', ['$scope', 'flickrAPI', function($scope, flickrAPI) {
+    .controller('eBlastListCtrl', ['$scope', 'eblastAPI', function($scope, eblastAPI) {
 
         $scope.entries = [];
 
         $scope.refresh = function() {
-            flickrAPI.search().then( function(data) {
+            eblastAPI.search().then( function(data) {
                 $scope.entries = data.items;
             });
         };
@@ -16,10 +16,10 @@ angular.module('flickularApp')
 
     }])
 
-    .controller('FlickrViewCtrl', ['$scope', '$routeParams', 'flickrAPI', function($scope, $routeParams, flickrAPI) {
+    .controller('eBlastViewCtrl', ['$scope', '$routeParams', 'eblastAPI', function($scope, $routeParams, eblastAPI) {
 
         $scope.refresh = function() {
-            flickrAPI.search().then( function(data) {
+            eblastAPI.search().then( function(data) {
                 $scope.entry = data.items[$routeParams.index];
             });
         };

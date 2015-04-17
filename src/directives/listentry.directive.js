@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('flickularApp')
+angular.module('eBlastApp')
 
-.directive('flkaListEntry', function() {
+.directive('eblastListEntry', function() {
     return {
         restrict: 'E',
         scope: {

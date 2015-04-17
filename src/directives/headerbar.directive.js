@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('flickularApp')
+angular.module('eBlastApp')
 
 .directive('flkaHeaderBar', function() {
     return {

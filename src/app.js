@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('flickularApp', ['ngRoute', 'ngSanitize', 'ui.bootstrap'])
+angular.module('eBlastApp', ['ngRoute', 'ngSanitize', 'ui.bootstrap'])
 
-    .value('flickrURL', 'http://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&jsoncallback=JSON_CALLBACK')
+    .value('eBlastURL', 'http://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&jsoncallback=JSON_CALLBACK')
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
@@ -10,7 +10,7 @@ angular.module('flickularApp', ['ngRoute', 'ngSanitize', 'ui.bootstrap'])
                 templateUrl:'views/home/home.html'
             })
             .when('/flickr/list', {
-                controller:'FlickrListCtrl',
+                controller:'eBlastListCtrl',
                 templateUrl:'views/flickr/list.html'
             })
             .when('/flickr/view/:index', {

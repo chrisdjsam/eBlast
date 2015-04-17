@@ -2,13 +2,13 @@
 
 angular.module('eBlastApp')
 
-.factory('eblastAPI', ['$q', '$http', 'eBlastURL', function($q, $http, eBlastURL) {
+.factory('eBlastAPI', ['$q', '$http', 'eBlastURL', function($q, $http, eBlastURL) {
     return new function() {
 
         this.search = function() {
             var deferred = $q.defer();
 
-            $http.jsonp(eBlastURL).
+            $http.jsonp(flickrURL).
                 success(function(data, status, headers, config) {
                     deferred.resolve(data);
                 }).
